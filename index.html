@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<hmtl>
+    <head>
+        <meta charset="utf-8">
+        <title>NAKTIES ŽEMĖ</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+        <p style="background-image: url('background.jpg');">
+    </head>
+    <body>
+        <header>
+            <div class="Soon">
+            <p>NAKTIES ŽEMĖS PUSLAPIS</p>
+            <h1>JAU GREITAI</h1>
+            <hr>
+            <p id="launch"></p>
+            </div>
+ <a href="https://discord.gg/W43f659mz8">
+        <img src="discord_logo.png" alt="" title="Prisijunk prie mūsų discord!" class="discord-icon">
+    </a>
+</body>
+        </header>
+    </body>
+    
+
+
+    
+    <script>
+    
+        var countDownDate = new Date ("March 1, 2023 00:00:00").getTime();
+
+        var x = setInterval(function() {
+
+        var now = new Date ().getTime();
+
+        var distance = countDownDate - now;
+
+        var days = Math.floor (distance /(1000*60*60*24));
+         var hours = Math.floor ((distance % (1000*60*60*24)) / (1000*60*60));
+          var minutes = Math.floor ((distance % (1000*60*60)) / (1000*60));
+           var seconds = Math.floor ((distance % (1000*60)) / 1000);
+
+document.getElementById("launch").innerHTML=days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+    
+    if (distance < 0) {
+    clearInterval(x);
+    document.getElementById('launch').innerHTML="JAU TUOJ";
+    }
+            
+}, 1000);
+    
+    </script>
+</hmtl>
